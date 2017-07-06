@@ -1,8 +1,56 @@
-<html>
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
   <head>
-    <title>Le Vie</title>
+    <meta charset="utf-8">
+    <title>La Vie</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
   </head>
   <body>
-    Testeo 10/10
+    <header id="main-header">
+  		<a id="logo-header" href="#">
+  			<span class="site-name">La Vie</span>
+  			<span class="site-desc">Talent Hackatón</span>
+  		</a>
+  		<nav>
+  			<ul>
+  				<li><a href="#">Inicio</a></li>
+  				<li><a href="#">Acerca de</a></li>
+  				<li><a href="#">Contacto</a></li>
+  			</ul>
+  		</nav>
+    </header>
+
+    <section id="main-content">
+      <article>
+  			<header>
+  				<h1 align="center">¡Bienvenido a La Vie!</h1>
+          <p></p><p></p>
+          <div >
+              <img class="traficligth" width="200" src="{% static 'images/traficligth.png' %}" align="right">
+              <form action="http://mshvc2.pythonanywhere.com/">
+                <label for="analisislabel">Realizar el análisis</label>
+                <input type="text" name="fname" class="text" placeholder="@Nombre de usuario">
+                <input type="submit" value="Analizar" class="button">
+              </form>
+          </div>
+          <div>
+            <h4 align="center">
+              ¡Ayúdanos a prevenir los suicidios!
+            </h4>
+          </div>
+  			</header>
+  			<div class="content">
+
+  			</div>
+
+  		</article> <!-- /article -->
+    </section>
+    <footer id="main-footer">
+		    <p>&copy; 2017 <a href="http://mshvc2.pythonanywhere.com/">La Vie</a></p>
+	  </footer>
   </body>
 </html>
